@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Extension Detector",
+  "version": "1.0",
+  "permissions": [
+    "management"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost:5173/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
